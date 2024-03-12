@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <h1>$400<span>.00</span></h1>
+      
+      <form>
+        <div className="basic">
+          <input type="text" placeholder={'+200 new TV'}/>
+          <input type="datetime-local"/>
+        </div>
+        <div className="description">
+          <input type="text" placeholder={'description'}/>
+        </div>
+          <button type="submit">Add Transaction</button>
+        </form>
+        
+        <div className="transactions">
+          <div className="transaction">
+            <div className="left">
+              <div className="name">New TV</div>
+              <div className="description">Wanted a new TV</div> 
+          </div>
+          <div className="right">
+            <div className="price">+200</div>
+            <div className="date">03-12-2024 5:35PM</div>
+            
+            <div className="transaction">
+            <div className="left">
+              <div className="name">New TV</div>
+              <div className="description">Wanted a new TV</div> 
+          </div>
+          <div className="right">
+            <div className="price">+200</div>
+            <div className="date">03-12-2024 5:35PM</div>
+        </div>
+        
+        <div className="transaction">
+            <div className="left">
+              <div className="name">New TV</div>
+              <div className="description">Wanted a new TV</div> 
+          </div>
+          <div className="right">
+            <div className="price">+200</div>
+            <div className="date">03-12-2024 5:35PM</div>
+        </div>
+        </div>
+    </main>
+  );
 }
 
-export default App
+export default App;
