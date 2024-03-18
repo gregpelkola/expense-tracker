@@ -10,7 +10,9 @@ app.get('/api/test', (req , res) => {
 });
 
 app.post('/api/transaction', (req, res) => {
-    res.json(body, 'transaction added');
+    const {name, datetime, description} = res.body;
+    
+    res.json(req.body);
 
 });
 
