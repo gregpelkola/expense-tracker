@@ -21,15 +21,19 @@ function App() {
             <div className="left">
               <div className="name">New TV</div>
               <div className="description">Wanted a new TV</div> 
+            </div>
           </div>
+        </div>
           <div className="right">
             <div className="price red">-$200</div>
             <div className="date">03-12-2024 5:35PM</div>
+          </div>
             
             <div className="transaction">
             <div className="left">
               <div className="name">Paycheck</div>
               <div className="description">Weekly paycheck</div> 
+            </div>
           </div>
           <div className="right">
             <div className="price green">+1000</div>
