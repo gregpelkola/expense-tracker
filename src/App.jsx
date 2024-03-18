@@ -1,13 +1,25 @@
 import './App.css'
-import { useState } from 'react';
+import { useState, initialState } from 'react';
 
 function App() {
   const [name, setName] = useState(initialState,'');
   const [datetime, setDatetime] = useState(initialState,'');
   const [description, setDescription] = useState(initialState,'');
-  function addNewTransaction() {
-
+  function addNewTransaction(ev) {
+    ev.preventDefault(); 
+    const url = process.env.REACT_APP_API_URL+'/transaction';
+    fetch(url, init,{
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(value, {name, datetime, description})
+    }).then(response => {
+      response.json().then(json => {
+        console.log('result', json);
+      });
+    });
   }
+  
+  
   return (
     <main>
       <h1>$400<span>.00</span></h1>
